@@ -33,3 +33,24 @@ for i in {1..10}; do echo $RANDOM; done | python3 interpolate.py --resolution=0.
 ```
 
 ![plot](https://raw.githubusercontent.com/yschaeff/interpolate/master/plot.png)
+
+the file out will contain:
+
+```
+ 2.0,  4609.0
+ 2.01,  4614.9
+ 2.02,  4618.53
+ 2.03,  4619.98
+ 2.04,  4619.3
+ 2.05,  4616.58
+ 2.06,  4611.88
+ 2.07,  4605.29
+ 2.08,  4596.87
+ 2.09,  4586.69
+ 2.1,  4574.84
+ 2.11,  4561.37
+ 2.12,  4546.37
+ 2.13,  4529.91
+ 2.14,  4512.05
+...
+```
