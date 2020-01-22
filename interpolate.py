@@ -29,10 +29,13 @@ parser = argparse.ArgumentParser()
 parser.add_argument('infile', nargs='?', type=argparse.FileType('r'), default=sys.stdin, help="stdin if omitted or '-'.")
 parser.add_argument('outfile', nargs='?', type=argparse.FileType('w'), default=sys.stdout, help="stdout if omitted or '-'.")
 group = parser.add_mutually_exclusive_group(required=True)
-group.add_argument('--resolution', type=float, help="Resolution of interpolated points.")
-group.add_argument('--steps', type=int, help="Desired number of steps between to given points.")
-parser.add_argument('--plot', action='store_true', help="Show plot when done.")
-parser.add_argument('--dx', type=float, default=1.0, help="When no X given use DX as offset to the previous X.")
+group.add_argument('--resolution', '-r', type=float,
+    help="Resolution of interpolated points.")
+group.add_argument('--steps', '-s', type=int,
+    help="Desired number of steps between two given points. Unlike resolution, steps does not take the distance between x_i and x_i+1 into account.")
+parser.add_argument('--plot', '-p', action='store_true', help="Show plot when done.")
+parser.add_argument('--dx', '-d', type=float, default=1.0,
+    help="When no X given use DX as offset to the previous X.")
 args = parser.parse_args()
 
 fmt = "{: 2.6}, {: 2.6}\n"
