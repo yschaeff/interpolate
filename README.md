@@ -1,6 +1,6 @@
 # Interpolate
 
-Given a line based input of either (X) or (X,Y) values (can be mixed) calculate
+Given a line based input of either (Y) or (X,Y) values (can be mixed) calculate
 the cubic interpolation of the points in between each two consecutive values.
 It is required that the input is sorted by X value, ascending.
 
