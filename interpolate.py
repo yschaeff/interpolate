@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import numpy as np
-import pylab as plt
+import matplotlib.pyplot as plt
 import argparse, sys
 
 def f(x, P):
@@ -91,7 +91,7 @@ if args.plot:
     AY.append(P[1][1])
     AP.append(P[1]) ## endpoint
     AP.append(P[2]) ## endpoint
-    plt.plot(AX, AY)
+    plt.scatter(AX, AY, s=2)
     X, Y = zip(*AP)
-    plt.plot(X, Y, 'or')
+    plt.scatter(X, Y, alpha=.5)
     plt.show()
