@@ -19,11 +19,14 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  --resolution RESOLUTION
+  --resolution RESOLUTION, -r RESOLUTION
                         Resolution of interpolated points.
-  --steps STEPS         Desired number of steps between to given points.
-  --plot                Show plot when done.
-  --dx DX               When no X given use DX as offset to the previous X.
+  --steps STEPS, -s STEPS
+                        Desired number of steps between two given points.
+                        Unlike resolution, steps does not take the distance
+                        between x_i and x_i+1 into account.
+  --plot, -p            Show plot when done.
+  --dx DX, -d DX        When no X given use DX as offset to the previous X.
 ```
 
 ## Example
